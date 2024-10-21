@@ -1,0 +1,53 @@
+    
+.grid{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    div{
+            border: black solid 5px;
+}    
+    &_a{
+        @extend .grid;
+        grid-template-rows: repeat(26, 1fr);
+    }
+    &_b{
+        @extend .grid;
+        grid-template-rows: repeat(36, 1fr);
+    }
+
+
+}
+.cell{
+    background-color: lightblue;
+    aspect-ratio: 3/4;
+    width: 100%;
+    &_a{
+        &_1{grid-area: 1 / 9 / 5 / 13;}
+        &_2{grid-area: 1 / 5 / 5 / 9;}
+        &_3{grid-area: 3 / 1 / 5 / 3;}
+        &_4{grid-area: 6 / 1 / 10 / 8;}
+        &_5{grid-area: 11 / 2 / 13 / 4;}
+        &_6{grid-area: 11 / 6 / 13 / 8;}
+        &_7{grid-area: 11 / 10 / 13 / 12;}
+        &_8{grid-area: 14 / 7 / 20 / 13;}
+        &_9{grid-area: 17 / 1 / 20 / 4;}
+        &_10{grid-area: 16 / 5 / 18 / 7;}
+        &_11{grid-area: 21 / 2 / 26 / 7;}
+        &_12{grid-area: 21 / 8 / 26 / 13;}
+    }
+    &_b{
+        &_1{grid-area: 1 / 1 / 7 / 7;}
+        &_2{grid-area: 2 / 9 / 5 / 12;}
+        &_3{grid-area: 8 / 1 / 14 / 13;}
+        &_4{grid-area: 15 / 8 / 19 / 12;}
+        &_5{grid-area: 17 / 1 / 21 / 7;}
+        &_6{grid-area: 22 / 9 / 26 / 13;}
+        &_7{grid-area: 22 / 1 / 26 / 5;}
+        &_8{grid-area: 27 / 1 / 29 / 3;}
+        &_9{grid-area: 27 / 9 / 31 / 13;}
+        &_10{grid-area: 27 / 5 / 31 / 9;}
+        &_11{grid-area: 32 / 1 / 36 / 5;}
+        &_12{grid-area: 32 / 9 / 36 / 13;}
+    }
+}
