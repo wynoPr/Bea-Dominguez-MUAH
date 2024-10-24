@@ -5,7 +5,7 @@ import { Analytics } from '@vercel/analytics/react';
 import './index.scss'
 import Work from './pages/work/work/Work';
 import Header from './components/header/Header';
-import Legal from './pages/legal/LEgal';
+import Legal from './pages/legal/Legal';
 
 function App() {
   const [count, setCount] = useState(0)
