@@ -1,0 +1,239 @@
+    
+.grid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    div{
+            border: black solid 5px;
+}    
+    &_a{
+        @extend .grid;
+        grid-template-rows: repeat(26, 1fr);
+    } 
+    &_a1{
+        @extend .grid;
+        grid-template-rows: repeat(5, 1fr);
+    } 
+    &_a2{
+        @extend .grid;
+        grid-template-rows: repeat(10, 1fr);
+    } 
+    &_a3{
+        @extend .grid;
+        grid-template-rows: repeat(13, 1fr);
+    } 
+    &_a4{
+        @extend .grid;
+        grid-template-rows: repeat(20, 1fr);
+    }
+
+    &_b{
+        @extend .grid;
+        grid-template-rows: repeat(36, 1fr);
+    }
+    &_b1{
+        @extend .grid;
+        grid-template-rows: repeat(7, 1fr);
+    }
+    &_b2{
+        @extend .grid;
+        grid-template-rows: repeat(14, 1fr);
+    }
+    &_b3{
+        @extend .grid;
+        grid-template-rows: repeat(19, 1fr);
+    }
+    &_b4{
+        @extend .grid;
+        grid-template-rows: repeat(21, 1fr);
+    }
+    &_b5{
+        @extend .grid;
+        grid-template-rows: repeat(26, 1fr);
+    }
+    &_b6{
+        @extend .grid;
+        grid-template-rows: repeat(31, 1fr);
+    }
+
+    &_c{
+        @extend .grid;
+        grid-template-rows: repeat(39, 1fr);
+    }
+    &_c1{
+        @extend .grid;
+        grid-template-rows: repeat(6, 1fr);
+    }
+    &_c2{
+        @extend .grid;
+        grid-template-rows: repeat(11, 1fr);
+    }
+    &_c3{
+        @extend .grid;
+        grid-template-rows: repeat(16, 1fr);
+    }
+    &_c4{
+        @extend .grid;
+        grid-template-rows: repeat(20, 1fr);
+    }
+    &_c5{
+        @extend .grid;
+        grid-template-rows: repeat(25, 1fr);
+    }
+    &_c6{
+        @extend .grid;
+        grid-template-rows: repeat(29, 1fr);
+    }
+    &_c7{
+        @extend .grid;
+        grid-template-rows: repeat(33, 1fr);
+    }
+    &_c8{
+        @extend .grid;
+        grid-template-rows: repeat(36, 1fr);
+    }
+
+    &_d{
+        @extend .grid;
+        grid-template-rows: repeat(27, 1fr);
+    }
+    &_d1{
+        @extend .grid;
+        grid-template-rows: repeat(5, 1fr);
+    }
+    &_d2{
+        @extend .grid;
+        grid-template-rows: repeat(7, 1fr);
+    }
+    &_d3{
+        @extend .grid;
+        grid-template-rows: repeat(10, 1fr);
+    }
+    &_d4{
+        @extend .grid;
+        grid-template-rows: repeat(12, 1fr);
+    }
+    &_d5{
+        @extend .grid;
+        grid-template-rows: repeat(16, 1fr);
+    }
+    &_d6{
+        @extend .grid;
+        grid-template-rows: repeat(21, 1fr);
+    }
+    &_d7{
+        @extend .grid;
+        grid-template-rows: repeat(24, 1fr);
+    }
+
+    &_e{
+        @extend .grid;
+        grid-template-rows: repeat(29, 1fr);
+    }
+    &_e1{
+        @extend .grid;
+        grid-template-rows: repeat(5, 1fr);
+    }
+    &_e2{
+        @extend .grid;
+        grid-template-rows: repeat(9, 1fr);
+    }
+    &_e3{
+        @extend .grid;
+        grid-template-rows: repeat(12, 1fr);
+    }
+    &_e4{
+        @extend .grid;
+        grid-template-rows: repeat(16, 1fr);
+    }
+    &_e5{
+        @extend .grid;
+        grid-template-rows: repeat(20, 1fr);
+    }
+    &_e6{
+        @extend .grid;
+        grid-template-rows: repeat(23, 1fr);
+    }
+    &_e7{
+        @extend .grid;
+        grid-template-rows: repeat(27, 1fr);
+    }
+ 
+}
+.cell{
+    aspect-ratio: 3/4;
+    width: 100%;
+    &_a {
+        &_0 { grid-area: 1 / 9 / 5 / 13; }
+        &_1 { grid-area: 1 / 5 / 5 / 9; }
+        &_2 { grid-area: 3 / 1 / 5 / 3; }
+        &_3 { grid-area: 6 / 1 / 10 / 8; }
+        &_4 { grid-area: 11 / 2 / 13 / 4; }
+        &_5 { grid-area: 11 / 6 / 13 / 8; }
+        &_6 { grid-area: 11 / 10 / 13 / 12; }
+        &_7 { grid-area: 14 / 7 / 20 / 13; }
+        &_8 { grid-area: 17 / 1 / 20 / 4; }
+        &_9 { grid-area: 16 / 5 / 18 / 7; }
+        &_10 { grid-area: 21 / 2 / 26 / 7; }
+        &_11 { grid-area: 21 / 8 / 26 / 13; }
+      }
+      &_b {
+        &_0 { grid-area: 1 / 1 / 7 / 7; }
+        &_1 { grid-area: 2 / 9 / 5 / 12; }
+        &_2 { grid-area: 8 / 1 / 14 / 13; }
+        &_3 { grid-area: 15 / 8 / 19 / 12; }
+        &_4 { grid-area: 17 / 1 / 21 / 7; }
+        &_5 { grid-area: 22 / 9 / 26 / 13; }
+        &_6 { grid-area: 22 / 1 / 26 / 5; }
+        &_7 { grid-area: 27 / 1 / 29 / 3; }
+        &_8 { grid-area: 27 / 9 / 31 / 13; }
+        &_9 { grid-area: 27 / 5 / 31 / 9; }
+        &_10 { grid-area: 32 / 1 / 36 / 5; }
+        &_11 { grid-area: 32 / 9 / 36 / 13; }
+      }
+      &_c {
+        &_0 { grid-area: 1 / 7 / 6 / 11; }
+        &_1 { grid-area: 4 / 2 / 6 / 4; }
+        &_2 { grid-area: 7 / 1 / 11 / 5; }
+        &_3 { grid-area: 7 / 9 / 11 / 13; }
+        &_4 { grid-area: 12 / 5 / 16 / 9; }
+        &_5 { grid-area: 16 / 9 / 20 / 13; }
+        &_6 { grid-area: 16 / 1 / 19 / 6; }
+        &_7 { grid-area: 21 / 1 / 25 / 5; }
+        &_8 { grid-area: 25 / 5 / 29 / 9; }
+        &_9 { grid-area: 29 / 9 / 33 / 13; }
+        &_10 { grid-area: 31 / 1 / 35 / 5; }
+        &_11 { grid-area: 35 / 9 / 39 / 13; }
+      }
+      &_d {
+        &_0 { grid-area: 1 / 2 / 5 / 6; }
+        &_1 { grid-area: 1 / 9 / 5 / 13; }
+        &_2 { grid-area: 5 / 6 / 7 / 8; }
+        &_3 { grid-area: 7 / 1 / 10 / 4; }
+        &_4 { grid-area: 8 / 5 / 12 / 9; }
+        &_5 { grid-area: 12 / 9 / 16 / 13; }
+        &_6 { grid-area: 12 / 3 / 14 / 5; }
+        &_7 { grid-area: 14 / 1 / 16 / 3; }
+        &_8 { grid-area: 17 / 1 / 21 / 5; }
+        &_9 { grid-area: 21 / 7 / 24 / 10; }
+        &_10 { grid-area: 24 / 10 / 27 / 13; }
+        &_11 { grid-area: 24 / 2 / 27 / 5; }
+      }
+      &_e {
+        &_0 { grid-area: 1 / 1 / 5 / 5; }
+        &_1 { grid-area: 1 / 9 / 5 / 13; }
+        &_2 { grid-area: 5 / 5 / 9 / 9; }
+        &_3 { grid-area: 9 / 1 / 12 / 4; }
+        &_4 { grid-area: 12 / 9 / 16 / 13; }
+        &_5 { grid-area: 14 / 3 / 16 / 5; }
+        &_6 { grid-area: 16 / 1 / 20 / 5; }
+        &_7 { grid-area: 18 / 11 / 20 / 13; }
+        &_8 { grid-area: 20 / 7 / 23 / 10; }
+        &_9 { grid-area: 23 / 1 / 27 / 5; }
+        &_10 { grid-area: 25 / 9 / 27 / 11; }
+        &_11 { grid-area: 27 / 7 / 29 / 9; }
+      }
+      
+}

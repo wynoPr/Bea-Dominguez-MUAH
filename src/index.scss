@@ -42,99 +42,92 @@ body {
 
 @font-face {
   font-family: 'Quicksand';
-  src: url('src/assets/fonts/Quicksand-Regular.ttf') format('truetype');
+  src: url('/fonts/Quicksand-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Quicksand';
-  src: url('src/assets/fonts/Quicksand-Bold.ttf') format('truetype');
+  src: url('/fonts/Quicksand-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Quicksand';
-  src: url('src/assets/fonts/Quicksand-Light.ttf') format('truetype');
-  font-weight: 300; /* Light */
+  src: url('/fonts/Quicksand-Light.ttf') format('truetype');
+  font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Quicksand';
-  src: url('src/assets/fonts/Quicksand-Medium.ttf') format('truetype');
-  font-weight: 500; /* Medium */
+  src: url('/fonts/Quicksand-Medium.ttf') format('truetype');
+  font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Quicksand';
-  src: url('src/assets/fonts/Quicksand-SemiBold.ttf') format('truetype');
-  font-weight: 600; /* SemiBold */
+  src: url('/fonts/Quicksand-SemiBold.ttf') format('truetype');
+  font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Dream';
-  src: url('src/assets/fonts/FontsFree-Net-Dream-Avenue.ttf') format('truetype');
+  src: url('/fonts/FontsFree-Net-Dream-Avenue.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Sirenik';
-  src: url('src/assets/fonts/Sirenik-Italic.ttf') format('truetype');
+  src: url('/fonts/Sirenik-Italic.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Sirenik';
-  src: url('src/assets/fonts/Sirenik-Italic.ttf') format('truetype');
+  src: url('/fonts/Sirenik-Italic.ttf') format('truetype');
   font-weight: normal;
   font-style: italic;
 }
+
 @font-face {
   font-family: 'Baskerville';
-  src: url('src/assets/fonts/BaskervilleMTStd-Regular.ttf') format('truetype');
+  src: url('/fonts/BaskervilleMTStd-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Baskerville';
-  src: url('src/assets/fonts/BaskervilleMTStd-Bold.ttf') format('truetype');
+  src: url('/fonts/BaskervilleMTStd-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Baskerville';
-  src: url('src/assets/fonts/BaskervilleMTStd-Italic.ttf') format('truetype');
+  src: url('/fonts/BaskervilleMTStd-Italic.ttf') format('truetype');
   font-weight: normal;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Baskerville';
-  src: url('src/assets/fonts/BaskervilleMTStd-SemiBd.ttf') format('truetype');
-  font-weight: 600; /* SemiBold */
+  src: url('/fonts/BaskervilleMTStd-SemiBd.ttf') format('truetype');
+  font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Baskerville';
-  src: url('src/assets/fonts/BaskervilleMTStd-BoldIt.ttf') format('truetype');
-  font-weight: 700; /* Bold Italic */
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Baskerville';
-  src: url('src/assets/fonts/BaskervilleMTStd-SemiBdIt.ttf') format('truetype');
-  font-weight: 600; /* SemiBold Italic */
-  font-style: italic;
+  src: url('/fonts/BaskervilleMTStd-BoldIt.ttf') format('truetype');
+  font-weight: 700
 }
 
 
@@ -173,7 +166,7 @@ body {
 }
 .p{
   font-family: "Quicksand";
-  font-weight: 200;
+  font-weight: 500;
   font-size: medium;
   color: #2d2a26;
 }
@@ -206,4 +199,10 @@ body {
 }
 .f-dim {
   color: #766E64;
+}
+a:hover{
+  color: #DEA89C;
+}
+.active {
+  color: #D06959;
 }
