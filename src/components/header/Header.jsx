@@ -13,17 +13,17 @@ export default function Header() {
     <header className='header'>
         <Link to={"/"} className='header_logo'>
             <img src='https://beadominguezmuah.s3.eu-north-1.amazonaws.com/logos/logobeadominguez_.png' alt='Bea Dominguez MUAH logo'/>
-            <figcaption className='h5'>Make - Up & Hair</figcaption>
+            <span className='h5'>Make - Up & Hair</span>
         </Link>
         
         { !(location.pathname == '/Legal' || location.pathname === '/Contact' || location.pathname === '/About') &&
             <nav className='header_nav'>
             {location.pathname == '/' &&<h1 className='h2 bold'>Work</h1>}
-            {location.pathname == '/Grooming' &&<h1 className='h2 bold active'>Grooming</h1>}
-            {location.pathname == '/Women' &&<h1 className='h2 bold active'>Woman</h1>}
-            {location.pathname == '/Kids' &&<h1 className='h2 bold active'>Kids</h1>}
-            {location.pathname == '/Advertising' &&<h1 className='h2 bold active'>Advertising</h1>}
-            {location.pathname == '/Celeb' &&<h1 className='h2 bold active'>Celeb</h1>}
+            {location.pathname == '/Grooming' &&<h1 className='h2 active'>Grooming</h1>}
+            {location.pathname == '/Women' &&<h1 className='h2 active'>Woman</h1>}
+            {location.pathname == '/Kids' &&<h1 className='h2 active'>Kids</h1>}
+            {location.pathname == '/Advertising' &&<h1 className='h2 active'>Advertising</h1>}
+            {location.pathname == '/Celeb' &&<h1 className='h2 active'>Celeb</h1>}
             <ul>
                 <li><NavLink 
                     className={`h4 ${location.pathname === '/Grooming' ? 'active' : ''}`} 
