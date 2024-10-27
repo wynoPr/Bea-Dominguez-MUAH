@@ -15,16 +15,22 @@ function App() {
     <>
       <BrowserRouter>
       <Header/>
-          <Routes>
-            <Route path="/" element={<Work/>} />  
-            <Route path="/:id(\\d+)" element={<Work />} />
+          <Routes>  
             <Route path="/Grooming" element={<Work/>} /> 
-            <Route path="/Women" element={<Work/>} /> 
+            <Route path="/Grooming/:id" element={<Work/>} /> 
+            <Route path="/Women" element={<Work/>} />
+            <Route path="/Women/:id" element={<Work/>} /> 
             <Route path="/Kids" element={<Work/>} /> 
+            <Route path="/Kids/:id" element={<Work/>} /> 
             <Route path="/Advertising" element={<Work/>} /> 
+            <Route path="/Advertising/:id" element={<Work/>} />
             <Route path="/Celeb" element={<Work/>} /> 
-            <Route path="/Legal" element={<Legal/>} />       
-            <Route path="*" element={<Navigate to={'/'}/>} />      
+            <Route path="/Celeb/:id" element={<Work/>} />
+            <Route path="/Legal" element={<Legal/>} /> 
+            <Route path="/Legal/:id" element={<Legal/>} /> 
+            <Route path="/:id" element={<Work/>} />
+            <Route path="/" element={<Work/>} />      
+            {/* <Route path="*" element={<Navigate to={'/'}/>} />       */}
           </Routes>
       <Footer/>
       </BrowserRouter>

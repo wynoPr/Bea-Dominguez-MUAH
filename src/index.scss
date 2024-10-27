@@ -12,6 +12,14 @@ body{
   background-color: #FAFAFB ;
   scroll-behavior: smooth;
 }
+#root{
+  
+  min-height: 100vh;
+}
+section{
+  
+  min-height: calc(100vh - 80px);
+}
 
 //mix
 
@@ -200,9 +208,11 @@ body {
 .f-dim {
   color: #766E64;
 }
-a:hover{
-  color: #DEA89C;
-}
 .active {
   color: #D06959;
+}
+@media (min-width: 800px) { /* Ajusta el tamaño mínimo según sea necesario */
+  a:hover {
+    color: #DEA89C;
+  }
 }

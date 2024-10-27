@@ -1,8 +1,12 @@
 .work{
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     a{
         background-repeat: no-repeat;
         background-size: contain;
-        background-position: left;
+        background-position-x: 0px;
     }
 }

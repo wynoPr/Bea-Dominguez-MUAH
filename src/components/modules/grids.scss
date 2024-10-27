@@ -237,3 +237,15 @@
       }
       
 }
+
+.image {
+    opacity: 0; 
+    background-position-y: 60px;
+  }
+  
+  .image.visible {
+    opacity: 1; 
+    background-position-y: 0px;
+    transition: opacity 0.7s ease-in-out, background-position-y 0.7s ease-in-out; 
+    
+  }

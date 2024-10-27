@@ -1,8 +1,15 @@
 import React, { useEffect, useState } from 'react'
 
 import './grids.scss'
+import { Link, useLocation } from 'react-router-dom';
 
 export default function Modules({data, type}) {
+
+  // console.log(data);
+  const location = useLocation();
+  // console.log(location.pathname);
+  
+  
 
     const [vari, setVari] = useState([]);
 
@@ -45,14 +52,13 @@ export default function Modules({data, type}) {
             else if (data.length === 9) {setVari(6);}
             else if (data.length > 9 && data.length <= 11) {setVari(7);}
         }
-    }, [])
-    
+    }, [])  
 
   return (
     <section className={`grid_${type}${vari}`}>
         <span className='cell'/>
   {data.map((item, i) => (
-    <a className={`cell_${type}_${i}`} key={i} style={{ backgroundImage: `url(https://picsum.photos/id/${item.id}/300/400)` }}></a>
+    <Link to={location.pathname !== '/' ? `${location.pathname}/${Number(item.id)}` : `/${Number(item.id)}`} className={`cell_${type}_${i} image`} key={i} style={{ backgroundImage: `url(https://picsum.photos/id/${item.id}/300/400)` }}/>
 
   ))}
 </section>
