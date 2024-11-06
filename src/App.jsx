@@ -7,6 +7,7 @@ import Work from './pages/work/work/Work';
 import Header from './components/header/Header';
 import Legal from './pages/legal/Legal';
 import Footer from './components/header/Footer';
+import Testiniar from './pages/test/Testiniar';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -16,6 +17,7 @@ function App() {
       <BrowserRouter>
       <Header/>
           <Routes>  
+            <Route path="/test" element={<Testiniar/>} /> 
             <Route path="/Grooming" element={<Work/>} /> 
             <Route path="/Grooming/:id" element={<Work/>} /> 
             <Route path="/Women" element={<Work/>} />

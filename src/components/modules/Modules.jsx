@@ -58,9 +58,13 @@ export default function Modules({data, type}) {
     <section className={`grid_${type}${vari}`}>
         <span className='cell'/>
   {data.map((item, i) => (
-    <Link to={location.pathname !== '/' ? `${location.pathname}/${Number(item.id)}` : `/${Number(item.id)}`} className={`cell_${type}_${i} image`} key={i} style={{ backgroundImage: `url(https://picsum.photos/id/${item.id}/300/400)` }}/>
+    <Link to={location.pathname !== '/' ? `${location.pathname}/${Number(item.id)}` : `/${Number(item.id)}`} 
+    className={`cell_${type}_${i} image`} key={i}>
+      <img src={item.url} />
+    </Link>
 
   ))}
 </section>
   )
 }
+// style={{ backgroundImage: `url(${item.url})` }}

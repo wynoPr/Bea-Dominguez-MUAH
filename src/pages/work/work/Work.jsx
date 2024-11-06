@@ -13,6 +13,8 @@ export default function Work() {
 
   useEffect(() => {
     if (id && isNaN(Number(id))) {
+      console.log('id not a number');
+      
         navigate('/'); 
     }
 }, [id]); 
@@ -75,9 +77,12 @@ export default function Work() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    axios.get('https://picsum.photos/v2/list?page=2&limit=100')
+    axios.get('https://x8ki-letl-twmt.n7.xano.io/api:IhioyNcV/beadominguez')
     .then((res) => {
-      setData(res.data);
+      const sortedData = res.data
+        .filter(item => item.publish === true)
+        .sort((a, b) => new Date(b.date) - new Date(a.date));
+      setData(sortedData);
       setLoading(false);
       
     })
@@ -96,6 +101,8 @@ export default function Work() {
   const [sliced, setSliced] = useState([])
   useEffect(() => {
     // console.log('slicing');
+    // console.log(data);
+    
     
     if (data.length > 0) {
       let grupos = [];
@@ -117,30 +124,61 @@ export default function Work() {
   const [filtered, setFiltered] = useState([])
 
    useEffect(() => {
-    if (location.pathname === "/Grooming" && filtered.length > 0){
+    if (location.pathname == "/Grooming"){
       setFiltered(data.filter(item => item.tags.includes('Grooming')))
     }
-    else if (location.pathname === "/Women" && filtered.length > 0){
+    else if (location.pathname == "/Women"){
       setFiltered(data.filter(item => item.tags.includes('Woman')))
     }
-    else if (location.pathname === "/Advertising" && filtered.length > 0){
+    else if (location.pathname == "/Advertising"){
       setFiltered(data.filter(item => item.tags.includes('Advertisement')))
     }
-    else if (location.pathname === "/Kids" && filtered.length > 0){
+    else if (location.pathname == "/Kids"){
       setFiltered(data.filter(item => item.tags.includes('Kids')))
     }
-    else if (location.pathname === "/Celeb" && filtered.length > 0){
+    else if (location.pathname == "/Celeb" ){
       setFiltered(data.filter(item => item.tags.includes('Celebs')))
     }
 
-    if (filtered == 0 && (location.pathname !== '/' && !/\/\d+$/.test(location.pathname)) ) {
-      navigate('/');
-    }
+    // if (filtered == 0 && (location.pathname !== '/' && !/\/\d+$/.test(location.pathname)) ) {
+    //   console.log('lorito');
+      
+    //   navigate('/');
+    // }
    
      return () => {
        setFiltered([])
      }
    }, [location])
+
+   //slice filtered
+
+  const [slicedF, setSlicedF] = useState([])
+  useEffect(() => {
+    // console.log('slicing filtered');
+    // console.log(data);
+    
+    
+    if (filtered.length > 0) {
+      let grupos = [];
+  
+      // Divide el array en grupos de 12
+      for (let i = 0; i < filtered.length; i += 12) {
+        grupos.push(filtered.slice(i, i + 12));
+      }
+  
+      // Actualiza el estado con los grupos creados
+      setSlicedF(grupos);
+      // console.log(sliced);
+      
+    }
+  }, [filtered]);
+
+  //  useEffect(() => {
+  //    console.log(filtered);
+     
+  //  }, [filtered])
+   
 
   return (
     <>
@@ -153,8 +191,8 @@ export default function Work() {
         sliced.map((item, i) => (
           <Modules key={i} data={item} type={order[i]} />
         )) :
-        filtered.length !== 0 ?
-          filtered.map((item, i) => (
+        slicedF.length !== 0 ?
+          slicedF.map((item, i) => (
             <Modules key={i} data={item} type={order[i]} />
           )) :
           <p className='h4'>No hay resultados</p>
